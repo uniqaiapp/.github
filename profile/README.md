@@ -38,6 +38,7 @@ Every repository here is one focused thing: a skill that Claude Code, Cursor, Co
 |:---|:---|:---|
 | [no-plastic](https://github.com/uniqaiapp/no-plastic) | Fixes plastic skin and fake-looking AI portraits: rewrites an image prompt into a photographic brief (skin texture, light from somewhere, real lens, grain), locks what an edit may not change, and lints the result for Flux, Nano Banana, Midjourney and SDXL. | Skill · Cursor rule · `AGENTS.md` · Python linter |
 | [suno-producer](https://github.com/uniqaiapp/suno-producer) | Writes Suno style prompts, meta-tags and lyric structure that the model follows, in English and Russian, with a meter check for singable lines and a lint for tag placement and field length. README in Russian. | Skill · Cursor rule · `AGENTS.md` · Python scripts |
+| [suno-latin-producer](https://github.com/hablamusic/suno-latin-producer) | The Latin and Brazilian edition of suno-producer, by the sister project [HablaMusic](https://github.com/hablamusic) (free DJ tools): Spanish and Portuguese syllable counting and rhyme, reggaeton, cumbia, funk carioca and other genres, DJ edits, and a [browser version](https://hablamusic.github.io/suno-latin-producer/). | Skill · browser app · Python scripts |
 
 ## Install a skill
 
