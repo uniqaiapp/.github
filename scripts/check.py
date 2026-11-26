@@ -21,6 +21,7 @@ ORG = "uniqaiapp"
 UTM = {"utm_source": "github", "utm_medium": "org_profile", "utm_campaign": ORG}
 MAX_UNIQAI_LINKS = 3
 BANNER_TARGET_KB, BANNER_CAP_KB = 15, 30
+RASTER_CAP_KB = 200
 
 # Built from code points so this file never contains the strings it forbids.
 _FORBIDDEN_CODEPOINTS = [
@@ -117,10 +118,19 @@ def check_profile():
         if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", r):
             fail(f"profile/README.md: repository name {r!r} is not kebab-case")
     # the banner <picture> must point at this repository on the main branch
-    for name in ("banner.svg", "banner-light.svg"):
+    for name in ("banner-dark.jpg", "banner-light.jpg"):
         if f"https://raw.githubusercontent.com/{ORG}/.github/main/profile/assets/{name}" not in text:
             fail(f"profile/README.md does not reference profile/assets/{name} by its raw URL")
     return repos
+
+
+def check_raster_banners():
+    for name in ("banner-dark.jpg", "banner-light.jpg"):
+        path = os.path.join(ASSETS, name)
+        if not os.path.exists(path):
+            fail(f"profile/assets/{name} is missing")
+        elif os.path.getsize(path) / 1024 > RASTER_CAP_KB:
+            fail(f"profile/assets/{name}: above the {RASTER_CAP_KB} KB cap")
 
 
 def check_banners():
@@ -167,6 +177,7 @@ def main():
     check_forbidden()
     listed = check_profile()
     check_banners()
+    check_raster_banners()
     if a.repos:
         check_repo_list(a.repos, listed)
     for w in warnings:

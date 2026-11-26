@@ -1,44 +1,42 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner-light.svg">
-  <img alt="uniqaiapp: skills, prompt packs and price data for AI photo, video and chat" src="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner.svg" width="1280" height="320">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner-dark.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner-light.jpg">
+  <img alt="uniqaiapp by UniqAI: a film strip of AI video stills, each labelled with the open-source tool and model its prompt was written for" src="https://raw.githubusercontent.com/uniqaiapp/.github/main/profile/assets/banner-dark.jpg" width="1280">
 </picture>
 
-**Open-source skills, prompt packs and price data for AI photo, video and chat workflows, with no dependencies and no invented numbers.**
+**Free, open-source AI video prompt builders, prompt lists, agent skills and price data for Kling, Veo, Wan, Seedance, Runway, Suno and Flux.**
 
-[Skills for agents](#skills-for-agents) · [AI video](#ai-video) · [AI photo and music](#ai-photo-and-music) · [Install](#install-a-skill) · [How these repos are built](#how-these-repos-are-built)
+[Try in browser](#try-in-browser) · [All tools](#all-tools) · [Install a skill](#install-a-skill) · [How these repos are built](#how-these-repos-are-built)
 
 </div>
 
-Every repository here is one focused thing: a skill that Claude Code, Cursor, Codex and any agent that reads `AGENTS.md` can load, a script that runs on a stock Python 3 or Node install, or a dataset with a source and a check date on every row. The README of each one shows what the included script prints on the included examples, and nothing else.
+uniqaiapp is the open-source side of [UniqAI](https://uniqai.app/?utm_source=github&utm_medium=org_profile&utm_campaign=uniqaiapp), an AI photo, video and chat app. Every repository is one focused thing: a skill that Claude Code, Cursor, Codex and any agent that reads `AGENTS.md` can load, a script that runs on a stock Python 3 or Node install, or a dataset with a source and a check date on every row.
 
-## Skills for agents
+## Try in browser
 
-| Repository | What it does | Ships as |
+| Tool | What you get | Open |
 |:---|:---|:---|
-| [deslop-ru](https://github.com/uniqaiapp/deslop-ru) | Removes AI slop from Russian text: finds and rewrites the phrases that make a draft sound generated (канцелярит, empty intros, hedge words, list walls) while keeping the author's voice. README in Russian. | Skill · Cursor rule · `AGENTS.md` · Python checker |
-| [token-diet](https://github.com/uniqaiapp/token-diet) | Reduces LLM token costs by measuring first: protects code and identifiers, rewrites a prompt from any language into compact English through a cheap model, verifies nothing was lost, then counts tokens before and after. README in Russian. | Skill · Cursor rule · `AGENTS.md` · Python scripts |
-| [skill-shrinker](https://github.com/uniqaiapp/skill-shrinker) | Compresses `SKILL.md`, `AGENTS.md`, `CLAUDE.md` and Cursor rules so agents load fewer tokens per turn: finds duplicate rules, narration, long examples and dead sections, and checks that every MUST / NEVER sentence survived. | Skill · Cursor rule · `AGENTS.md` · Python script |
-| [model-router](https://github.com/uniqaiapp/model-router) | Picks the cheapest model that still passes the task: a fast / smart / premium decision table for GPT, Claude, Gemini and Grok with dated prices, a classifier that routes prompts by shape, and a cost calculator. | Skill · Cursor rule · `AGENTS.md` · Node scripts |
+| [video-director](https://github.com/uniqaiapp/video-director) | AI video prompt builder: a one-line idea becomes a timed storyboard and a prompt in each model's own shape for Kling 3.0, Veo 3, Wan 2.5, Seedance and Runway. | [Try it in your browser](https://uniqaiapp.github.io/video-director/) |
+| [awesome-ai-video-prompts](https://github.com/uniqaiapp/awesome-ai-video-prompts) | Curated AI video prompts you can search, filter by model and copy, each with settings and why it works. | [Try it in your browser](https://uniqaiapp.github.io/awesome-ai-video-prompts/) |
+| [ugc-ad-director](https://github.com/uniqaiapp/ugc-ad-director) | UGC AI video ad scripts and storyboards with a two-second hook and per-shot prompts for Kling and Veo 3. | Browser version soon |
+| [suno-latin-producer](https://github.com/hablamusic/suno-latin-producer) | Suno prompts and lyrics for reggaeton, cumbia and funk carioca, by the sister project [HablaMusic](https://github.com/hablamusic). | [Try it in your browser](https://hablamusic.github.io/suno-latin-producer/) |
 
-## AI video
+## All tools
 
-| Repository | What it does | Ships as |
+| Repository | Keywords | What it does |
 |:---|:---|:---|
-| [video-director](https://github.com/uniqaiapp/video-director) | Turns an idea into a shot-by-shot AI video prompt: a timed storyboard with one camera move per beat, lens, light and motion physics, rendered in each model's own shape for Kling 3.0, Veo 3, Wan 2.5, Seedance and Runway. | Skill · Cursor rule · `AGENTS.md` · Python script |
-| [ugc-ad-director](https://github.com/uniqaiapp/ugc-ad-director) | Scripts and storyboards UGC-style AI video ads: a hook inside the first two seconds, five timed beats, shot list, captions, voiceover and per-shot prompts for Kling and Veo 3, with a lint that refuses fake reviews and unlabelled AI presenters. | Skill · Cursor rule · `AGENTS.md` · Python script |
-| [awesome-ai-video-prompts](https://github.com/uniqaiapp/awesome-ai-video-prompts) | Curated AI video prompts for Kling 3.0, Veo 3, Wan 2.5, Runway and Seedance, each with model, mode, duration, aspect and a note on why the structure works. A `rendered_on` field stays empty until someone reports a real render. | JSON + Markdown list (CC BY 4.0) · Python scripts |
-| [ai-video-pricing](https://github.com/uniqaiapp/ai-video-pricing) | AI video cost per second from each vendor's own pricing page, with the formula, source URL and check date on every row. Vendors sell plans and credits, not seconds; the table does the division and shows it. | JSON + CSV dataset (CC BY 4.0) · Node CLI |
-
-## AI photo and music
-
-| Repository | What it does | Ships as |
-|:---|:---|:---|
-| [no-plastic](https://github.com/uniqaiapp/no-plastic) | Fixes plastic skin and fake-looking AI portraits: rewrites an image prompt into a photographic brief (skin texture, light from somewhere, real lens, grain), locks what an edit may not change, and lints the result for Flux, Nano Banana, Midjourney and SDXL. | Skill · Cursor rule · `AGENTS.md` · Python linter |
-| [suno-producer](https://github.com/uniqaiapp/suno-producer) | Writes Suno style prompts, meta-tags and lyric structure that the model follows, in English and Russian, with a meter check for singable lines and a lint for tag placement and field length. README in Russian. | Skill · Cursor rule · `AGENTS.md` · Python scripts |
-| [suno-latin-producer](https://github.com/hablamusic/suno-latin-producer) | The Latin and Brazilian edition of suno-producer, by the sister project [HablaMusic](https://github.com/hablamusic) (free DJ tools): Spanish and Portuguese syllable counting and rhyme, reggaeton, cumbia, funk carioca and other genres, DJ edits, and a [browser version](https://hablamusic.github.io/suno-latin-producer/). | Skill · browser app · Python scripts |
+| [video-director](https://github.com/uniqaiapp/video-director) | AI video prompt generator, storyboard, Kling, Veo 3 | Turns an idea into a shot-by-shot AI video prompt: one camera move per beat, lens, light and motion physics, in each model's own syntax. |
+| [awesome-ai-video-prompts](https://github.com/uniqaiapp/awesome-ai-video-prompts) | text-to-video prompts, image-to-video, Wan, Runway | Curated prompt list with model, mode, duration, aspect and a note on why the structure works. CC BY 4.0. |
+| [ugc-ad-director](https://github.com/uniqaiapp/ugc-ad-director) | UGC ads, AI video ads, hook, shot list | Five timed beats, captions, voiceover and per-shot prompts, with a lint that refuses fake reviews and unlabelled AI presenters. |
+| [ai-video-pricing](https://github.com/uniqaiapp/ai-video-pricing) | AI video cost per second, pricing dataset | Price per second from each vendor's own pricing page, with formula, source URL and check date on every row. |
+| [no-plastic](https://github.com/uniqaiapp/no-plastic) | realistic AI portraits, skin texture, Flux, Midjourney | Rewrites an image prompt into a photographic brief and lints it, so portraits stop looking plastic. |
+| [suno-producer](https://github.com/uniqaiapp/suno-producer) | Suno prompts, meta-tags, lyrics | Style prompts, meta-tags and lyric structure Suno follows, in English and Russian, with a meter check. |
+| [model-router](https://github.com/uniqaiapp/model-router) | LLM routing, model cost, GPT, Claude, Gemini | Picks the cheapest model that still passes the task, with dated prices and a cost calculator. |
+| [token-diet](https://github.com/uniqaiapp/token-diet) | LLM token cost, prompt compression | Rewrites a prompt into compact English through a cheap model, checks nothing was lost and counts tokens before and after. |
+| [skill-shrinker](https://github.com/uniqaiapp/skill-shrinker) | SKILL.md, AGENTS.md, CLAUDE.md, context size | Compresses agent instruction files and checks that every MUST and NEVER sentence survived. |
+| [deslop-ru](https://github.com/uniqaiapp/deslop-ru) | AI slop, Russian text, humanizer | Finds and rewrites the phrases that make a Russian draft sound generated, keeping the author's voice. |
 
 ## Install a skill
 
@@ -74,6 +72,6 @@ Issues and pull requests are open on every repository; each `CONTRIBUTING.md` li
 
 <div align="center">
 
-<sub>Made by <a href="https://uniqai.app/?utm_source=github&utm_medium=org_profile&utm_campaign=uniqaiapp">UniqAI</a>, an AI photo, video and chat app. These tools are the ones we use to write our own prompts, pages and skills; <a href="https://uniqai.app/about?utm_source=github&utm_medium=org_profile&utm_campaign=uniqaiapp">more about the app</a>.</sub>
+<sub>Made by <a href="https://uniqai.app/?utm_source=github&utm_medium=org_profile&utm_campaign=uniqaiapp">UniqAI</a>, an AI photo, video and chat app. Built by Vlad Yasinski (<a href="https://www.linkedin.com/in/vlad-yasinski-ua5er/">LinkedIn</a>, <a href="https://www.roimobi.com">roimobi.com</a>). Sister project: <a href="https://github.com/hablamusic">HablaMusic</a>.</sub>
 
 </div>
