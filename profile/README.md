@@ -21,6 +21,7 @@ uniqaiapp is the open-source side of [UniqAI](https://uniqai.app/?utm_source=git
 | [video-director](https://github.com/uniqaiapp/video-director) | AI video prompt builder: a one-line idea becomes a timed storyboard and a prompt in each model's own shape for Kling 3.0, Veo 3, Wan 2.5, Seedance and Runway. | [Try it in your browser](https://uniqaiapp.github.io/video-director/) |
 | [awesome-ai-video-prompts](https://github.com/uniqaiapp/awesome-ai-video-prompts) | Curated AI video prompts you can search, filter by model and copy, each with settings and why it works. | [Try it in your browser](https://uniqaiapp.github.io/awesome-ai-video-prompts/) |
 | [ugc-ad-director](https://github.com/uniqaiapp/ugc-ad-director) | UGC ad script checker in the browser: lint the hook, AI label, claims and fake testimonials, then copy per-shot prompts for Kling and Veo 3. | [Try it in your browser](https://uniqaiapp.github.io/ugc-ad-director/) |
+| [no-plastic](https://github.com/uniqaiapp/no-plastic) | AI image prompt checker in the browser: score a portrait prompt, see the words that cause plastic skin, copy a fill-in photo brief. | [Try it in your browser](https://uniqaiapp.github.io/no-plastic/) |
 | [suno-latin-producer](https://github.com/hablamusic/suno-latin-producer) | Suno prompts and lyrics for reggaeton, cumbia and funk carioca, by the sister project [HablaMusic](https://github.com/hablamusic). | [Try it in your browser](https://hablamusic.github.io/suno-latin-producer/) |
 
 ## All tools
