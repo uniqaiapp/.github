@@ -8,7 +8,7 @@
 
 **Free, open-source AI video prompt builders, prompt lists, agent skills and price data for Kling, Veo, Wan, Seedance, Runway, Suno and Flux.**
 
-[Try in browser](#try-in-browser) · [All tools](#all-tools) · [Install a skill](#install-a-skill) · [How these repos are built](#how-these-repos-are-built)
+[All tools in one page](https://uniqaiapp.github.io/) · [Try in browser](#try-in-browser) · [All tools](#all-tools) · [Install a skill](#install-a-skill) · [How these repos are built](#how-these-repos-are-built)
 
 </div>
 
